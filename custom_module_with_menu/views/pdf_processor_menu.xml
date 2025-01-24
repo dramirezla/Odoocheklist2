@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <menuitem id="menu_pdf_processor_main" name="PDF Processor" sequence="10"/>
-    <menuitem id="menu_pdf_processor" name="Manage PDFs" parent="menu_pdf_processor_main" sequence="20" action="action_pdf_processor"/>
+    <data>
+        <!-- Main Menu -->
+        <menuitem id="menu_pdf_processor_main" name="PDF Processor" sequence="10"/>
+
+        <!-- Submenu: Manage PDFs -->
+        <menuitem id="menu_pdf_processor" name="Manage PDFs" parent="menu_pdf_processor_main" sequence="20" action="action_pdf_processor"/>
+
+        <!-- Action Window -->
+        <record id="action_pdf_processor" model="ir.actions.act_window">
+            <field name="name">Manage PDFs</field>
+            <field name="res_model">pdf.processor</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help">Manage and process PDF files easily.</field>
+        </record>
+    </data>
 </odoo>
