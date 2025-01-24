@@ -1,0 +1,33 @@
+<odoo>
+    <template id="index" name="PDF Processor Index">
+        <form action="/pdf_processor/upload" method="post" enctype="multipart/form-data">
+            <h1>Subir un archivo PDF</h1>
+            <input type="file" name="pdf_file" required/>
+            <button type="submit">Procesar PDF</button>
+        </form>
+    </template>
+
+    <template id="result" name="PDF Processor Result">
+        <h1>Partes del PDF</h1>
+        <h2>Frecuencia de Partes</h2>
+        <ul>
+            <t t-foreach="frecuencia_partes" t-as="parte">
+                <li><t t-esc="parte[0]"/>: <t t-esc="parte[1]"/></li>
+            </t>
+        </ul>
+
+        <h2>Partes Detalladas</h2>
+        <t t-foreach="partes.items()" t-as="page">
+            <div class="layout">
+                <h3>Página <t t-esc="page[0]"/></h3>
+                <t t-foreach="page[1]" t-as="item">
+                    <div class="button"
+                         t-att-style="'width: {}px; height: {}px;'.format(item[2], item[1])"
+                         t-esc="item[0]"/>
+                </t>
+            </div>
+        </t>
+        <button class="counter-btn" onclick="countSelectedParts()">Contar partes seleccionadas</button>
+        <div id="selected-parts-result"></div>
+    </template>
+</odoo>
