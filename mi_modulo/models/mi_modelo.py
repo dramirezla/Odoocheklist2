@@ -1,6 +1,7 @@
-from odoo import models, fields
+from odoo import models, fields, api
 
 class MiModelo(models.Model):
+    _inherit = "sale.order"
     _name = 'mi.modelo'
     _description = 'Descripción de mi modelo'
 
@@ -9,4 +10,8 @@ class MiModelo(models.Model):
     fecha = fields.Date(string='Fecha')
 
     def mostrar_partes_seleccionadas(self):
-        return "Hola mundo"
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'display_notification',
+            'name': 'Hola mundo'
+        }
