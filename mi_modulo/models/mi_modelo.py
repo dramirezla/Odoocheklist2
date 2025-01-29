@@ -13,6 +13,6 @@ class MiModelo(models.Model):
             'view_mode': 'form',
             'res_model': 'sale.order',
             'target': 'new',
-            'context': {'default_mensaje': mensaje}
+            'context': {'default_mensaje': mensaje},
             'views': [(False,'form')]
         }
