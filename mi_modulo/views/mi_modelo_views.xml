@@ -1,13 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="view_form_mi_modelo" model="ir.ui.view">
+    <record id="view_sale_order_form_custom" model="ir.ui.view">
         <field name="name">sale.order.form.inherit</field>
         <field name="model">sale.order</field>
-        <field name="inherit_id" ref="sale.view_order_form">
+        <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
             <xpath expr="//header" position="inside">
-                <button name="mostrar_partes_seleccionadas" type="object" string="Mostrar Partes Seleccionadas" class="oe_highlight"/>
+                <button name="action_mostrar_mensaje"
+                        type="object"
+                        string="Mostrar Mensaje"
+                        class="oe_highlight"/>
             </xpath>
         </field>
     </record>
-
 </odoo>
