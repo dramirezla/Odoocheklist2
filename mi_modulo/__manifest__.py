@@ -4,7 +4,7 @@
     'summary': 'Descripción breve del módulo',
     'description': 'Descripción detallada del módulo',
     'author': 'David Alejandro Ramírez',
-    'depends': ['base','sale.order'],
+    'depends': ['base','sale_management'],
     'data': [
         
         'views/mi_modelo_views.xml',
