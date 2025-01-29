@@ -18,21 +18,4 @@
             </xpath>
         </field>
     </record>
-
-    <record id="view_sale_order_popup" model="ir.ui.view">
-        <field name="name">sale.order.popup.form</field>
-        <field name="model">sale.order</field>
-        <field name="arch" type="xml">
-            <form string="Mensaje">
-                <sheet>
-                    <group>
-                        <field name="campo_a_mostrar" readonly="1"/>
-                    </group>
-                    <footer>
-                        <button string="Cerrar" class="oe_highlight" special="cancel"/>
-                    </footer>
-                </sheet>
-            </form>
-        </field>
-    </record>
 </odoo>
