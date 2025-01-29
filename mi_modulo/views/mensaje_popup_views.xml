@@ -9,9 +9,6 @@
                     <group>
                         <field name="mensaje" readonly="1"/>
                     </group>
-                    <footer>
-                        <button string="Cerrar" class="oe_highlight"/>
-                    </footer>
                 </sheet>
             </form>
         </field>
