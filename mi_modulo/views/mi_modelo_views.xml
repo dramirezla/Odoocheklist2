@@ -9,6 +9,7 @@
                         <field name="name"/>
                         <field name="descripcion"/>
                         <field name="fecha"/>
+                        <button name="mostrar_partes_seleccionadas" type="object" string="Mostrar Partes Seleccionadas" class="btn-primary"/>
                     </group>
                 </sheet>
             </form>
