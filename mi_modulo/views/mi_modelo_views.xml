@@ -17,13 +17,13 @@
     </record>
 
     <record id="view_tree_mi_modelo" model="ir.ui.view">
-        <field name="name">mi.modelo.tree</field>
+        <field name="name">mi.modelo.list</field>
         <field name="model">mi.modelo</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name"/>
                 <field name="fecha"/>
-            </tree>
+            </list>
         </field>
     </record>
 </odoo>
