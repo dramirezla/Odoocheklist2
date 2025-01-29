@@ -7,5 +7,7 @@ class MiModelo(models.Model):
         return {
             'type': 'ir.actions.client',
             'tag': 'display_notification',
-            'name': 'Hola mundo'
+            'params': {
+                'title': 'Hola mundo'
+            }
         }
