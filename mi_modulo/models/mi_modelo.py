@@ -11,7 +11,8 @@ class MiModelo(models.Model):
             'type': 'ir.actions.act_window',
             'name': 'Mensaje',
             'view_mode': 'form',
-            'res_model': 'mensaje.popup',
+            'res_model': 'sale.order',
             'target': 'new',
             'context': {'default_mensaje': mensaje}
+            'views': [(False,'form')]
         }
