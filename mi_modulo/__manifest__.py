@@ -6,7 +6,7 @@
     'author': 'David Alejandro Ramírez',
     'depends': ['base','sale_management'],
     'data': [
-        
+        'views/mensaje_popup_views.xml'
         'views/mi_modelo_views.xml',
     ],
     'installable': True,
