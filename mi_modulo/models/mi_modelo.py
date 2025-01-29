@@ -8,9 +8,10 @@ class MiModelo(models.Model):
     def mostrar_partes_seleccionadas(self):
         mensaje = self.campo_a_mostrar
         return {
-            'type': 'ir.actions.client',
-            'tag': 'display_notification',
-            'params': {
-                'title': mensaje
-            }
+            'type': 'ir.actions.act_window',
+            'name': 'Mensaje',
+            'view_mode': 'form',
+            'res_model': 'mensaje.popup',
+            'target': 'new',
+            'context': {'default_mensaje': mensaje}
         }
