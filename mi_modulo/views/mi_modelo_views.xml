@@ -5,6 +5,11 @@
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group>
+                    <field name="campo_a_mostrar"/>
+                </group>
+            </xpath>
             <xpath expr="//header" position="inside">
                 <button name="mostrar_partes_seleccionadas"
                         type="object"
