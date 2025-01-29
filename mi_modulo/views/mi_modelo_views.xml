@@ -5,7 +5,7 @@
         <field name="inherit_id" ref="sale.view_order_form">
         <field name="arch" type="xml">
             <xpath expr="//header" position="inside">
-                <button name="mostrar_partes_seleccionadas" type="object" string="Mostrar Partes Seleccionadas" class="btn-primary"/>
+                <button name="mostrar_partes_seleccionadas" type="object" string="Mostrar Partes Seleccionadas" class="oe_highlight"/>
             </xpath>
         </field>
     </record>
