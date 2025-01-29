@@ -1,1 +1,19 @@
-
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_mensaje_popup_form" model="ir.ui.view">
+        <field name="name">mensaje.popup.form</field>
+        <field name="model">mensaje.popup</field>
+        <field name="arch" type="xml">
+            <form string="Mensaje">
+                <sheet>
+                    <group>
+                        <field name="mensaje" readonly="1"/>
+                    </group>
+                    <footer>
+                        <button string="Cerrar" class="oe_highlight"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
